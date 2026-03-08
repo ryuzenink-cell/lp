@@ -49,14 +49,14 @@ Ferramenta utilizada:
 
 # Estrutura do Projeto (em desenvolvimento)
 
-lp
-│
-├── index.html
-├── style.css
-├── script.js
-├── infinity-scroll.js
-│
-└── src/
+lp  
+│  
+├── index.html  
+├── style.css  
+├── script.js  
+├── infinity-scroll.js  
+│  
+└── src/  
 (assets do projeto)
 
 
