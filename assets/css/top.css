@@ -1,17 +1,3 @@
-/* Fonts from Google FOnts */
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Geral Config. */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-}
-
 /* Logo COnfig. */
 .logo{
     width: 120px;
@@ -30,7 +16,7 @@ body{
 
 .nav{
     height: 75px;
-    width: 70%;
+    width: 72%;      /* Configure a largura do menu de navegação aqui */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,19 +33,37 @@ body{
 }
 
 .nav .nav-list .nav-row .nav-link{
+    position: relative;
+    font-weight: 500;
     text-decoration: none;
     color: #0F172A;
     font-size: 14.5px;
     padding: 0.6rem;
     border-radius: 100px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 1s ease;
 }
 
 .nav .nav-list .nav-row .nav-link:hover{
-    color: #F8FAFC;
-    background-color: #1E3A8A;
-    transition: all 0.4s ease;
+    color: #1E3A8A;
+    transition: all 1s ease;
+}
+
+.nav .nav-list .nav-row .nav-link:hover::after{
+    transform: scaleX(1);                /* Controla o underline animado */
+}
+
+.nav .nav-list .nav-row .nav-link::after{
+    content: "";
+    position: absolute;                  /* Controla o underline animado */
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: #1E3A8A;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 #btn-cta{
@@ -75,8 +79,9 @@ body{
 }
 
 #btn-cta:hover{
-    color: #F8FAFC;
-    background-color: rgb(56, 113, 235);
+    color: #1E3A8A;
+    background-color: #fff;
+    border: 1px solid #1E3A8A;
     transition: all 0.4s ease;
 }
 
@@ -103,6 +108,7 @@ body{
     height: 32px;
     border-radius: 100px;
     border-bottom: 1px solid rgb(226, 226, 226);
+    box-shadow: 0 8px 8px rgba(0,0,0,0.15);
 }
 
 .gradient-text{
@@ -118,60 +124,72 @@ body{
     color: transparent;
 }
 
+/* BTN Section */
+.btn-section{
+    display: flex;
+    gap: 16px;
+}
+
 .btn-order{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     border: none;
-    padding: 1rem;
+    padding: 0.8rem;
     width: 250px;
     border-radius: 100px;
     color: #fff;
     background-color: #1E3A8A;
     transition: all 0.4s ease;
     cursor: pointer;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.15);
 }
 
 .btn-order:hover{
-    color: #F8FAFC;
-    background-color: rgb(56, 113, 235);
+    color: #1E3A8A;
+    background-color: #fff;
+    border: 1px solid #1E3A8A;
     transition: all 0.4s ease;
 }
+
+.btn-github{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    padding: 0.8rem;
+    width: 250px;
+    border-radius: 100px;
+    color: #1E3A8A;
+    background-color: #fff;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 1px solid #1E3A8A;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.15);
+}
+
+.btn-github:hover{
+    color: #F8FAFC;
+    background-color: #1E3A8A;
+    transition: all 0.4s ease;
+}
+
+
 
 .hero-logo-bg{
     position: absolute;
     right: -40px;
     bottom: -100px;
-    width: 800px;
+    width: 500px;
     /*filter: blur(2px);*/
     z-index: 0;
 }
 
 /* Resume */
-.hero {
-    min-height: 100dvh;      /* melhor no mobile */
-    height: auto;            /* não trava */
-    padding: clamp(28px, 6vw, 80px) 0;  /* padding responsivo */
-    overflow: hidden;
-    background: #f7f8fb;
-    position: relative;
-    overflow: hidden;
-}
-
-.container {
-    width: min(1100px, 92%);
-    margin: 0 auto;
-}
-
-.hero-content{
-    display:flex;
-    flex-direction:column;
-    gap: 25px;
-    position: relative;
-    z-index: 2;
-}
 
 .hero-content p{
     color: #454f67;
@@ -185,7 +203,7 @@ body{
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr; /* esquerda maior, direita menor */
-  gap: 50px;
+  gap: 80px;                         /* Define a largura premitida para o "Web Design Estratégico e Crescimento Digital" e restante */
   align-items: center;
 }
 
