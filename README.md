@@ -1,5 +1,9 @@
 # Ryuzen — Portfólio de Web Design
 
+<p align="center">
+  <img src="assets/images/preview/site-preview.png" width="800">
+</p>
+
 Landing page desenvolvida para apresentar meus serviços de **Web Design Estratégico focado em criadores digitais**, como streamers, youtubers e criadores de conteúdo.
 
 O projeto demonstra minhas habilidades em **design de interfaces, desenvolvimento front-end e publicação de aplicações estáticas utilizando GitHub Pages.**
