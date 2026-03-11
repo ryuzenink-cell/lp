@@ -170,9 +170,6 @@
 
 /* Portifolio section config */
 #portfolio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
   padding:100px 20px;
   text-align:center;
 }
