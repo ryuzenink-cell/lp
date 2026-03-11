@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* ------ */
 .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 90dvh;      /* melhor no mobile */
     height: auto;            /* não trava */
     padding: clamp(28px, 6vw, 80px) 0;  /* padding responsivo */
-    overflow: hidden;
     overflow: hidden;
 }
 
@@ -27,7 +29,7 @@
     font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 12px;
-    width: 380px;
+    width: 35%;
 }
 
 .section-title p{
@@ -98,9 +100,11 @@
 
 /* Ferramentas que utilizo */
 .tools{
+  align-items: center;
+  height: 100%;
   padding: 80px 20px;
   text-align: center;
-  width: 72%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -166,7 +170,9 @@
 
 /* Portifolio section config */
 #portfolio{
-  margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   padding:100px 20px;
   text-align:center;
 }
